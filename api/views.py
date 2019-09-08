@@ -3,6 +3,7 @@ from rest_framework import generics
 from django.http import HttpResponse
 from django.core.files.storage import default_storage
 from . import imageProcessor
+import json
 # Create your views here.
 
 
@@ -26,6 +27,7 @@ def process_image(request):
     response = imageProcessor.image_processing(file_name123)
 
     print('here3')
+    response = json.dumps(response)
 
     return HttpResponse(response)
 
