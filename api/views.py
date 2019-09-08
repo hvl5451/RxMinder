@@ -14,8 +14,9 @@ def process_image(request):
     # client_id = request.GET.get('client_id')
     image = request.body
     print(request.FILES)
-    file = request.FILES['fileToUpload'].name
+    file = request.FILES['fileToUpload']
     print(file)
+    file_name = file.name
 
     # print(client_id)
     if image:
