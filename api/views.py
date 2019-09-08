@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework import generics
 from django.http import HttpResponse
 from django.core.files.storage import default_storage
+from .models import PillDetails
 from . import imageProcessor
 import json
 # Create your views here.
@@ -36,7 +37,10 @@ def update_pill_data(request):
     data = request.body
     python_obj = json.loads(data)
     print(python_obj, flush=True)
-    return HttpResponse('noah sucks')
+    med = PillDetails(**python_obj)
+    med.save()
+    print(med, flush=True)
+    return HttpResponse('{"success": true}}')
 
 # def getPillData(request, generics.ListAPI):
 
