@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
 from django.http import HttpResponse
+from django.core.files.storage import default_storage
 
 # Create your views here.
 
@@ -13,6 +14,9 @@ def process_image(request):
     # client_id = request.GET.get('client_id')
     image = request.body
     print(request.FILES)
+    file = request.FILES['fileToUpload'].name
+    print(file)
+
     # print(client_id)
     if image:
         response = '<h1>Successful</h1>'
