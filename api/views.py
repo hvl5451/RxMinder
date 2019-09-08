@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import generics
 from django.http import HttpResponse
 from django.core.files.storage import default_storage
-
+from . import imageProcessor
 # Create your views here.
 
 
@@ -26,7 +26,8 @@ def process_image(request):
 
     final_file = default_storage.open(file_name123)
     file_url = default_storage.url(final_file)
-    print(file_url)
+    imageProcessor.image_processing(file_name123)
+
     print('here3')
     if image:
         response = '<h1>Successful</h1>'
