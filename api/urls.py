@@ -20,4 +20,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('process_image', views.process_image, name='image_process'),
     path('update', views.update_pill_data, name='update_db'),
+    path('list_all', views.load_pill_data, name='load_pill_data'),
 ]
