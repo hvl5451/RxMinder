@@ -15,7 +15,6 @@ def process_image(request):
     image = request.body
     print(request.FILES)
     file = request.FILES['fileToUpload']
-    print(type(file))
     print('here')
     print(file.name)
     # print(client_id)
@@ -23,8 +22,7 @@ def process_image(request):
     print('here2')
     file_name123 = default_storage.save(file.name, file)
 
-    final_file = default_storage.open(file_name123)
-    file_url = default_storage.url(final_file)
+    # file_url = default_storage.url(final_file)
     imageProcessor.image_processing(file_name123)
 
     print('here3')
