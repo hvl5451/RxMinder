@@ -56,7 +56,7 @@ def load_pill_data(request):
 
 def delete_pill_data(request):
     name = request.GET.get('medication_name')
-    pill_instance = PillDetails.objects.get(name)
+    pill_instance = PillDetails.objects.get(medication_name=name)
     x = pill_instance.delete()
     print(x)
     return HttpResponse()
