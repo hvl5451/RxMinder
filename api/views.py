@@ -23,13 +23,10 @@ def process_image(request):
     file_name123 = default_storage.save(file.name, file)
 
     # file_url = default_storage.url(final_file)
-    imageProcessor.image_processing(file_name123)
+    response = imageProcessor.image_processing(file_name123)
 
     print('here3')
-    if image:
-        response = '<h1>Successful</h1>'
-    else:
-        response = '<h1>Failed</h1>'
+
     return HttpResponse(response)
 
 
