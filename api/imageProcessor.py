@@ -130,7 +130,7 @@ def image_processing(image):
         data_to_send['num_mg'] = None
 
     # parse medication name
-    with open('medication_names.txt') as f:
+    with open('/Users/semideum_zepodesgan01/PycharmProjects/RxMinder/api/medication_names.txt') as f:
         med_names = f.readlines()
         med_names = [x.strip() for x in med_names]
 
