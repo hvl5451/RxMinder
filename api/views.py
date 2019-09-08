@@ -18,6 +18,7 @@ def process_image(request):
     print(file)
     print('here')
     print(file.name)
+    print(file.open())
     # print(client_id)
     if image:
         response = '<h1>Successful</h1>'
