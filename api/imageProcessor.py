@@ -11,7 +11,7 @@ import re
 
 # First, connect to google vision, upload image, and pull data from cloud
 os.environ[
-    "GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/max/Desktop/Hackathon Fall 2019/PennApps 2019 RxMinder-49ae1b133ea3.json"
+    "GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/semideum_zepodesgan01/PycharmProjects/RxMinder/api/PennApps 2019 RxMinder-49ae1b133ea3.json"
 
 # Imports the Google Cloud client library
 from google.cloud import vision
