@@ -28,3 +28,4 @@ class DailyDosage(AbstractRequestHandler):
         return is_intent_name("DailyDosage")(handler_input)
 
     def handle(self, handler_input):
+        pass
