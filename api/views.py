@@ -35,7 +35,7 @@ def process_image(request):
 def update_pill_data(request):
     data = request.body()
     python_obj = json.loads(data)
-    for keys,
+    print(python_obj)
 
 # def getPillData(request, generics.ListAPI):
 

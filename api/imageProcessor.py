@@ -105,8 +105,8 @@ def image_processing(image):
 
     else:
         print('dosage data not found')
-        data_to_send['pills_per_dose'] = None
-        data_to_send['doses_per_day'] = None
+        data_to_send['pills_per_dose'] = ""
+        data_to_send['doses_per_day'] = ""
 
     # parse quantity in bottle
     qty_re = re.search("(qty|quantity|oty):? \d+", raw_text)
@@ -116,7 +116,7 @@ def image_processing(image):
         data_to_send['total_qty'] = qty
     else:
         print('qty data not found')
-        data_to_send['total_qty'] = None
+        data_to_send['total_qty'] = ""
 
     # parse milligram information
     mg_re = re.search("(\d+ ?mg)", raw_text)
@@ -127,14 +127,14 @@ def image_processing(image):
         data_to_send['num_mg'] = mg_dose
     else:
         print('mg data not found')
-        data_to_send['num_mg'] = None
+        data_to_send['num_mg'] = ""
 
     # parse medication name
     with open('/Users/semideum_zepodesgan01/PycharmProjects/RxMinder/api/medication_names.txt') as f:
         med_names = f.readlines()
         med_names = [x.strip() for x in med_names]
 
-    data_to_send['medication_name'] = None
+    data_to_send['medication_name'] = ""
     for m in med_names:
         if m in raw_text:
             print("medication {} found".format(m))
