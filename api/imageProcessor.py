@@ -142,6 +142,6 @@ def image_processing(image):
             break
 
     # finally, we have distilled all useful data into this dictionary!! Yay!!!
-    print(data_to_send)
+    print(data_to_send, flush=True)
     return data_to_send
 
