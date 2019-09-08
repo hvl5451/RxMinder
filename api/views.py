@@ -28,6 +28,7 @@ def process_image(request):
 
     print('here3')
     response = json.dumps(response)
+    print(response)
 
     return HttpResponse(response)
 
