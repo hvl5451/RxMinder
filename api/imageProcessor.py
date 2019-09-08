@@ -100,8 +100,8 @@ def image_processing(image):
             print('dose num times per day not found')
             num_times = 1
 
-        data_to_send['pills_per_dose'] = num_pills
-        data_to_send['doses_per_day'] = num_times
+        data_to_send['pills_per_dose'] = str(num_pills)
+        data_to_send['doses_per_day'] = str(num_times)
 
     else:
         print('dosage data not found')

@@ -13,7 +13,6 @@ def index(request):
 
 def process_image(request):
     # client_id = request.GET.get('client_id')
-    image = request.body
     print(request.FILES)
     file = request.FILES['fileToUpload']
     print('here')
@@ -32,6 +31,11 @@ def process_image(request):
 
     return HttpResponse(response)
 
+
+def update_pill_data(request):
+    data = request.body()
+    python_obj = json.loads(data)
+    for keys,
 
 # def getPillData(request, generics.ListAPI):
 
