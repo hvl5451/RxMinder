@@ -61,4 +61,5 @@ def delete_pill_data(request):
     print(x)
     return HttpResponse()
 
-
+def process_alexa_result(request):
+    pass

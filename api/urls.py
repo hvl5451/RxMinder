@@ -22,4 +22,5 @@ urlpatterns = [
     path('update', views.update_pill_data, name='update_db'),
     path('list_all', views.load_pill_data, name='load_pill_data'),
     path('delete', views.delete_pill_data, name='delete_pill'),
+    path('alexa', views.process_alexa_result, name='alexa'),
 ]
