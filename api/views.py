@@ -39,7 +39,7 @@ def update_pill_data(request):
     print(python_obj, flush=True)
     med = PillDetails(**python_obj)
     med.save()
-    print(med, flush=True)l
+    print(med, flush=True)
     return HttpResponse('{"success": true}}')
 
 # def getPillData(request, generics.ListAPI):
