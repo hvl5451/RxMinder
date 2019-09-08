@@ -36,6 +36,7 @@ def update_pill_data(request):
     data = request.body
     python_obj = json.loads(data)
     print(python_obj)
+    return HttpResponse('noah sucks')
 
 # def getPillData(request, generics.ListAPI):
 
