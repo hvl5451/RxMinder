@@ -45,7 +45,7 @@ def update_pill_data(request):
 # def getPillData(request, generics.ListAPI):
 
 def load_pill_data(request):
-    data = list(PillDetails.objects.all())
+    data = list(map(dict, PillDetails.objects.all()))
     print(data)
     return HttpResponse(json.dumps(data))
 
