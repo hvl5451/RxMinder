@@ -48,7 +48,7 @@ def update_pill_data(request):
 def load_pill_data(request):
     # data = list(map(lambda x: x.__dict__, PillDetails.objects.all()))
     # data = serializers.dataSerializer(PillDetails.objects.all(), many=True)
-    data = serializers.serialize('json', PillDetails.objects.all())
+    data = list(map(lambda x: x.fields, serializers.serialize('json', PillDetails.objects.all())))
     print(data, flush=True)
     return HttpResponse(data, content_type=json)
 
