@@ -33,7 +33,7 @@ def process_image(request):
 
 
 def update_pill_data(request):
-    data = request.body()
+    data = request.body
     python_obj = json.loads(data)
     print(python_obj)
 
