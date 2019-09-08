@@ -46,6 +46,7 @@ def update_pill_data(request):
 
 def load_pill_data(request):
     data = list(PillDetails.objects.all())
+    print(data)
     return HttpResponse(json.dumps(data))
 
 
