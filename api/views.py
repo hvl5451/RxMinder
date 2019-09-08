@@ -5,6 +5,7 @@ from django.core.files.storage import default_storage
 from .models import PillDetails
 from . import imageProcessor
 import json
+from . import serializers
 # Create your views here.
 
 
@@ -45,7 +46,8 @@ def update_pill_data(request):
 # def getPillData(request, generics.ListAPI):
 
 def load_pill_data(request):
-    data = list(map(dict, PillDetails.objects.all()))
+    # data = list(map(dict, PillDetails.objects.all()))
+    data = serializers.dataSerializer(PillDetails.objects.all(), many=True)
     print(data)
     return HttpResponse(json.dumps(data))
 
