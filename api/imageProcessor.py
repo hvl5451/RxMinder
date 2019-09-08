@@ -138,7 +138,7 @@ def image_processing(image):
     for m in med_names:
         if m in raw_text:
             print("medication {} found".format(m))
-            data_to_send['medication_name'] = m
+            data_to_send['medication_name'] = m.title()
             break
 
     # finally, we have distilled all useful data into this dictionary!! Yay!!!
