@@ -15,10 +15,9 @@ def process_image(request):
     image = request.body
     print(request.FILES)
     file = request.FILES['fileToUpload']
-    print(file)
+    print(type(file))
     print('here')
     print(file.name)
-    print(file.open())
     # print(client_id)
 
     print('here2')
