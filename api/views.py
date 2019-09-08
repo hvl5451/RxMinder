@@ -16,8 +16,8 @@ def process_image(request):
     print(request.FILES)
     file = request.FILES['fileToUpload']
     print(file)
-    file_name = file.name
-
+    print('here')
+    print(file.name)
     # print(client_id)
     if image:
         response = '<h1>Successful</h1>'
