@@ -12,7 +12,6 @@ def index(request):
 def process_image(request):
     # client_id = request.GET.get('client_id')
     image = request.body
-    image.decode('UTF-8')
     print(request.FILES)
     # print(client_id)
     if image:
