@@ -2,7 +2,7 @@ beautifulsoup4==4.8.0
 cachetools==3.1.1
 certifi==2019.6.16
 chardet==3.0.4
-Django==2.2.5
+Django==2.2.21
 djangorestframework==3.10.3
 google==2.0.2
 google-api-core==1.14.2
